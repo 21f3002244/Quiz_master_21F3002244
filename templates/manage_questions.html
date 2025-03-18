@@ -1,0 +1,51 @@
+<!-- templates/manage_subjects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Manage Questions</h1>
+        <a href="{{ url_for('add_question') }}" class="btn btn-primary mb-4">Add New Questions</a>
+        <a  href="{{url_for('admin_dashboard',username='rishav')}}" class="btn btn-info mb-4">admin_dashboard</a>
+        <table class="table table-striped">
+            <thead>
+                
+                <tr>
+                    <th>Question</th>
+                    <th>Option1</th>
+                    <th>Option2</th>
+                    <th>Option3</th>
+                    <th>Option4</th>
+                    <th>correct_answer</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for question in questions %}
+                <tr>
+                    <td>{{question.question_text }}</td>
+                    <td>{{ question.option1 }}</td>
+                    <td>{{ question.option2 }}</td>
+                    <td>{{ question.option3 }}</td>
+                    <td>{{ question.option4 }}</td>
+                    <td>{{ question.correct_option }}</td>
+
+
+                    
+                    <td>
+                        <a href="/delete_question/{{question.id}}" class="btn btn-danger">Delete</a>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

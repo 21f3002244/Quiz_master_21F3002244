@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Signup page</title>
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <div id="center">
+            
+                
+
+                <form action="/register" method="post">
+                <h1><div class="p-3 mb-2 bg-warning text-dark">Register Form</div></h1>
+                </div>
+                <form action="/signup" method="post">
+                
+                <div class="mb-3">
+                    <label for="Input1" class="form-label"><h3>User_name{email}</h3></label>
+                    <input type="text" class="form-control" id="Input1" placeholder="rishav123@gmail.com" name="username">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Input2" class="form-label"><h3>Enter Password</h3></label>
+                    <input type="password" class="form-control" id="Input2" placeholder="Enter your password" name="password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Input3" class="form-label"><h3>Full Name</h3></label>
+                    <input type="password" class="form-control" id="Input3" placeholder="Enter your Full Name" name="fullname">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Input4" class="form-label"><h3>Qualification</h3></label>
+                    <input type="password" class="form-control" id="Input4" placeholder="IITM" >
+                    <div class="mb-3">
+                        <label for="Input5" class="form-label"><h3>D.O.B</h3></label>
+                        <input type="password" class="form-control" id="Input5" placeholder="Enter your Date of Birth-{05/06/2003}" name="dob">
+                      </div>
+                  </div>
+                  <div id="center">
+                  <input class="btn btn-primary" type="submit" value="register">
+                 
+                  Already register? <a href="{{url_for('login')}}">Login</a> 
+                  </div>
+                  </form> 
+                  
+               
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

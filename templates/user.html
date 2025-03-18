@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>User Dashboard</title>
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+           
+            
+                <div id="center"> 
+
+                               
+
+                  <div class="p-3 mb-2 bg-success text-white"><h1><div>Welcome To This World {{username}}</div>Your Dream's Is Our Mission</h1></div>
+                 
+                  <h3>
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                      
+                      <a class="nav-link" href="{{url_for('quizzes')}}">Quizes</a>
+                      <a class="nav-link" href="">Score</a>
+                      <a class="nav-link" href="{{url_for('login')}}">Logout</a>
+                      </div>
+                      
+                      </h3>
+                </div>   
+                <h1 class="text-center">Want To Test Your Sklls </h1>
+
+            <hr>
+            
+               
+                <div class="list-group-item">
+                <div class="row">
+                   
+                    
+                    <div class="p-3 mb-2 bg-warning text-dark">
+                        <h4>Choose Your Subject</h4>
+                        <li class="list-group-item"><a href="{{ url_for('quizzes') }}">View Subjects</a></li>
+                            
+                    </div>
+                </div>
+                
+            </hr>     
+                       
+        </div>           
+                
+               
+                
+              
+                                                                                                      
+                    
+                
+                     
+                    
+                
+     
+    </div>
+</body>
+</html>

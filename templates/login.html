@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Login page</title>
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <div id="center">
+            
+                
+              <form action="/login" method="post">
+                
+                <h1><div class="p-3 mb-2 bg-warning text-dark">Login Form</div></h1>
+                </div>
+                <form action="/login" method="post">
+                
+                <div class="mb-3">
+                    <label for="Input1" class="form-label"><h3>User_name</h3></label>
+                    <input type="text" class="form-control" id="Input1" placeholder="amit" name="username">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Input2" class="form-label"><h3>Enter Password</h3></label>
+                    <input type="password" class="form-control" id="Input2" placeholder="Enter your password" name="password">
+                  </div>
+                  <div id="center">
+                    <input class="btn btn-primary" type="submit"  value="Login">
+                    
+                    Don't Have Account? <a href="{{url_for('register')}}">register</a> 
+                    </div>
+                    
+                    
+                  </div>
+                  
+                  </form> 
+                  
+                  </div>
+               
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- templates/take_quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ quiz.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>{{ quiz.title }}</h1>
+        <form method="POST">
+            {% for question in questions %}
+                <div class="form-group">
+                    <h1>{{ question.question_text }}</h1>
+                    <h3>1){{ question.option1 }}</h3>
+                    <h3>2){{ question.option2 }}</h3>
+                    <h3>3){{ question.option3 }}</h3>
+                    <h3>4){{ question.option4 }}</h3>
+                    <input type="text" class="form-control" name="{{ question.id }}" required>
+                    
+                </div>
+                
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

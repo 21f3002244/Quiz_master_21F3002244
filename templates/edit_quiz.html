@@ -1,0 +1,28 @@
+<!-- templates/manage_subjects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Quizzes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Manage Quizzes</h1>
+        <a href="{{ url_for('add_quiz') }}" class="btn btn-primary mb-4">Add Quiz</a>
+        <a href="{{url_for('admin_dashboard',username='rishav')}}" class="btn btn-info mb-4">admin_dashboard</a>
+ 
+            </html>
+            <h2>Edit Quiz</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label for="date">Quiz Date</label>
+                    <input type="datetime-local" class="form-control" id="date" name="date" required>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </body>
+    
+
